@@ -1,0 +1,9 @@
+def formatar_saudacao(nome:str, cidade:str):
+    return f"olá {nome}, seja bem-vindo(a) a {cidade}!"
+
+if __name__ == '__main__':
+    saudacao = formatar_saudacao("Alice", "Porto Alegre")
+    print(saudacao)
+
+#Exercicio 2
+
