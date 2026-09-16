@@ -5,5 +5,41 @@ if __name__ == '__main__':
     saudacao = formatar_saudacao("Alice", "Porto Alegre")
     print(saudacao)
 
+
 #Exercicio 2
+def calcular_perimetro(largura: float, altura: float):
+    perimetro = 2 * (largura + altura)
+    return perimetro
+perimetro = 2 * (5.0) + (10.0)
+print(f"2 - {perimetro}")
+  
+
+#Exercicio 3
+def fahrenheit_para_celsius(temp_f: float):
+    temp_celsius = (temp_f - 32) * (5 / 9)
+    return temp_celsius
+temp_f = (68 - 32) * (5 / 9)
+print(f"3 - {temp_f}")
+
+
+#Exercicio 4
+def calcular_gorjeta_por_pessoa(conta:float, porcentagem_gorjeta:float, pessoas:float):
+    gorjeta = (conta * (porcentagem_gorjeta / 100 )) / pessoas
+    return gorjeta
+gorjeta = calcular_gorjeta_por_pessoa(100, 15, 3)
+print(f"4 - {gorjeta}")
+
+
+#Exercicio 5
+def resumo_circulo(raio:float):
+    pi = 3.14159
+    area = pi * (raio**2)
+    return f"Um circulo de raio {raio}"
+
+
+#Exercicico 6
+def resumo_juros_basico(capital:float, taxa:float, anos:int):
+    M = capital * (1+taxa/100)**anos
+    return f"Após "
+
 
