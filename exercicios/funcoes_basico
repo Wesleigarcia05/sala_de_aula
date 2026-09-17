@@ -27,7 +27,7 @@ def calcular_gorjeta_por_pessoa(conta:float, porcentagem_gorjeta:float, pessoas:
     gorjeta = (conta * (porcentagem_gorjeta / 100 )) / pessoas
     return gorjeta
 gorjeta = calcular_gorjeta_por_pessoa(100, 15, 3)
-print(f"4 - {gorjeta}")
+print(f"4 - total de {gorjeta}")
 
 
 #Exercicio 5
