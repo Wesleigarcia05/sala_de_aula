@@ -9,6 +9,7 @@ def fizz_buzz(numero:int):
         return numero
     
 if __name__ == "__main__":
+
     pass
 
 #EXERCICIO 1
@@ -31,6 +32,21 @@ def verificar_paridade(numero:int):
     
         return "impar"
 print(f"o numero é par")
+
+#EXERCICIO 3
+def clssificar_numero(numero:int):
+    if numero > 0:
+        return "positivo"
+    if numero < 0:
+        return "negativo"
+    else:
+        return "zero"
+    
+#EXERCICIO 4 
+def calcular_resultado(nota_1: float, nota_2:float):
+    if (nota_1 + nota_2) / 2 > 7:
+        return "Aprovado"
+    
     
 
 

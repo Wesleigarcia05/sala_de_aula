@@ -99,7 +99,64 @@ def simular_saque(saldo_inicial: float, saques: list):
             negados.append(saques[index])
         index+=1
 
-    return saldo_inicial                    
+    return saldo_inicial           
+
+#EXERCICIO 11
+def remover_duplicados(lista: list):
+    not_duplicados = []
+    for numero in lista:
+        if numero not in not_duplicados:
+            not_duplicados.append(numero)
+    return not_duplicados
+
+#EXERCICIO 12
+def media_positivos(numeros:list):
+    if not numeros:
+        return 0.0
+    divisor = 0
+    valor = 0
+    for numero in numeros:
+        if numero > 0:
+            valor += numero
+            divisor += 1
+    return valor/divisor
+
+#EXERCICIO 13
+def validador_senha(senhas:list[str]):
+    validas = []
+    for senha in senhas:
+        if len(senha) > 8:
+            validas.append(senha)
+    return validas
+
+#EXERCICIO 14
+def primeiro_impar(numeros: list):
+    index = 0
+    while (index < len(numeros)):
+        if numeros[index] % 2 != 0:
+            return numeros[index]
+        return None
+
+#EXERCICIO 15
+def contar_ocorrencias(lista:list, target):
+    ocurrences = 0
+    for element in lista:
+        if element == target:
+            ocurrences+=1
+    return ocurrences
+
+#EXERCICIO 16                
+def is_estritamente_crescente(palavras: list):
+    index = 1
+    while (index < len(palavras) - 1):
+        if len(palavras[index] > len(palavras[index-1])):
+            pass
+        else:
+            return False
+    return True    
+
+
+                                                     
                                             
 
     
