@@ -155,6 +155,100 @@ def is_estritamente_crescente(palavras: list):
             return False
     return True    
 
+#EXERCICIO 17
+def mover_zeros_para_o_final(numeros: list):
+    zeros_final = numeros.copy()
+
+    for numero in numeros:
+        if numero == 0:
+            zeros_final.remove(numero)
+            zeros_final.append(numero)
+            
+    return zeros_final
+
+#EXERCICIO 18
+def processar_fila(clientes: list[tuple]):
+    aux = []
+    index = 0
+
+    for client in clientes:
+        if client[1] >= 60:
+            aux.insert(index, client)
+            index+=1
+        else:
+            aux.append(client)
+
+    return aux
+
+#EXERCICIO 19
+def encontrar_picos(numeros: list[int]):
+    picos = []
+    index = 1
+
+    while(index < len(numeros) - 1):
+        if numeros[index-1] < numeros[index] and \
+            numeros[index] > numeros[index + 1]:
+            
+            picos.append(numeros[index])
+
+    return picos
+
+#EXERCICIO 20
+def validar_extrato(saldo_inicial: float, 
+                    transacoes: list):
+    
+    index = 0
+    saldo_final = saldo_inicial
+
+    while (index < len(transacoes)):
+        if saldo_final < 0:
+            return f"Extrato Inválido: Saldo Negativo na Posição {index}"
+        else:
+            saldo_final += transacoes[index]
+        
+        return f"Extrato Válido: Saldo Final R$ {saldo_final}"
+
+
+if __name__ == '__main__':
+    numeros_pares = filtrar_pares([1, 2, 3, 4, 5, 6])
+    print(f"1 - {numeros_pares}")
+    
+    negativos = contar_negativos([2,1,-1,4,-9,-7])
+    print(f"2 - {negativos}")
+
+    soma = somar_maiores_que([10, 5, 20, 3, 15], 8)
+    print(f"3 - {soma}")
+
+    sem_negativos = zerar_negativos([4, -2, 7, -9, 0])
+    print(f"4 - {sem_negativos}")
+
+    valor = contem_valor(["maçã", "banana", "uva"], "banana")
+    print(f"5 - {valor}")
+
+    aprovados = contar_aprovados([8.5, 5.0, 7.0, 6.5, 9.0])
+    print(f"6 - {aprovados}")
+
+    filtro_palavras = filtrar_palavras_curtas(["sol", "computador", "python", "mar"], 6)
+    print(f"7 - {filtro_palavras}")
+
+    not_duplicados = remover_duplicados([1, 3, 2, 3, 1, 4, 2])
+    print(f"11 - {not_duplicados}")
+
+    zero_final = mover_zeros_para_o_final([0, 1, 0, 3, 12, 0, 5])
+    print(f"17- {zero_final}")
+
+    fila = processar_fila([("Ana", 25), ("Bento", 67), ("Carla", 18), ("Daniel", 72)])
+    print(f"18 - {fila}")
+
+    picos = encontrar_picos([1, 5, 2, 6, 3, 1, 8, 4])
+    print(f"19 - {picos}")
+
+    saldo1 = validar_extrato(100, [-50, -60, 20])
+    print(f"20.1 - {saldo1}")
+
+    saldo2 = validar_extrato(50, [30, -40, -20, 100])
+    print(f"20.2 - {saldo2}")
+
 
                                                      
                                             
