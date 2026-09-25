@@ -55,22 +55,41 @@ def metricas_cilindro(raio:float, altura:float):
     volume = pi * (raio**2) * altura
     area_superficie = 2 * pi * raio * (raio + altura)
     return f"Volume do cilindro: {volume:.2f} | Área de superficie: {area_superficie:.2f}"
+    print(metricas_cilindro(2, 5))
 
 #EXERCICIO 8 
 def gerar_item_fatura(nome_item: str, preço: float, porcentagem_desconto: float):
     economia = preço * (porcentagem_desconto / 100)
     return f"Item: {nome_item}| Preço final: {preço - economia} \ (Você economizou R${economia})"
+    
 
 #EXERCICIO 9 
-def resumo_emprestimo(capital:float, taxa_anual:float, anos:int):
+def resumo_emprestimo(capital, taxa_anual, anos):
     r = taxa_anual / 12 / 100
     n = anos * 12
-    M = capital * (r * ((1+r) ** n)) / (((1+r) ** n) - 1)
+
+    M = capital * (r * ((1 + r) ** n)) / (((1 + r) ** n) - 1)
     total_pago = M * n
 
-    return f"Empréstimo: R$ {capital} Parcela Mensal: R$ {M} | Total Pago: R$ {total_pago}"
+    return f"9 - Empréstimo: R$ {capital:.2f} | Parcela Mensal: R$ {M:.2f} | Total Pago: R$ {total_pago:.2f}"
+
+
+print(resumo_emprestimo(10000, 6.0, 3))
+
+#EXERCICIO 10
+def calcular_distancia(x1, y1, x2, y2):
+    distancia = ((x2 - x1) ** 2 + (y2 - y1) ** 2) ** 0.5
+
+    return f"10 - A distância entre ({x1}, {y1}) e ({x2}, {y2}) é de {distancia:.2f} unidades."
+
+
+print(calcular_distancia(1, 2, 4, 6))
+
+    
+
     
     
+
     
 
 
