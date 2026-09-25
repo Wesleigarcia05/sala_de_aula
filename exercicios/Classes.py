@@ -26,3 +26,23 @@ class Pessoa:
 pessoa = Pessoa("Ana", "São Paulo")
 
 print(pessoa.apresentar())
+
+#EXERCICIO 3
+class Produto:
+    def __init__(self, nome, preco):
+        self.nome = nome
+        self.preco = preco
+
+    def aplicar_desconto(self, percentual):
+        self.preco -= self.preco * (percentual / 100)
+
+
+# Exemplo de uso
+produto = Produto("Notebook", 2000)
+
+print(produto.preco)  # 2000
+
+produto.aplicar_desconto(10)
+
+print(produto.preco)  # 1800
+
