@@ -1,6 +1,6 @@
 #EXERCICIO 1
 class Cachorro:
-    def __init__(self, nome, raca, idade):
+    def __init__(self, nome: str, raca: str, idade: int):
         self.nome = nome
         self.raca = raca
         self.idade = idade
@@ -17,7 +17,7 @@ cachorro1.latir()
 
 #EXERCICIO 2
 class Pessoa:
-    def __init__(self, nome, cidade):
+    def __init__(self, nome:str, cidade:str):
         self.nome = nome
         self.cidade = cidade
 
