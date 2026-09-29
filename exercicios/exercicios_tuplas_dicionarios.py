@@ -38,5 +38,47 @@ print(resultado)
 # Saída: ["Alice", "Carla"]
 
 #EXERCICIO 4
+def tuplas_para_dicionario(lista_tuplas):
+    dicionario = {}
+
+    for chave, valor in lista_tuplas:
+        if valor >= 0:
+            dicionario[chave] = valor
+
+    return dicionario
+
+
+# Exemplo de chamada
+resultado = tuplas_para_dicionario([
+    ("a", 10),
+    ("b", -5),
+    ("c", 20)
+])
+
+print(resultado)
+
+#EXERCICIO 5
+def buscar_codigo(produtos, codigo_alvo):
+    i = 0
+
+    while i < len(produtos):
+        if produtos[i]["id"] == codigo_alvo:
+            return produtos[i]["nome"]
+
+        i += 1
+
+    return None
+
+
+# Exemplo de chamada
+resultado = buscar_codigo(
+    [{"id": 101, "nome": "Teclado"}, {"id": 102, "nome": "Mouse"}],
+    102
+)
+
+print(resultado)
+
+#EXERCICIO 6
+
 
 
