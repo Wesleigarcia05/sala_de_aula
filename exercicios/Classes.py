@@ -46,3 +46,42 @@ produto.aplicar_desconto(10)
 
 print(produto.preco)  # 1800
 
+#EXERCICIO 4
+class Retangulo:
+    def __init__(self, base, altura):
+        self.base = base
+        self.altura = altura
+
+    def calcular_area(self):
+        return self.base * self.altura
+
+    def calcular_perimetro(self):
+        return 2 * (self.base + self.altura)
+
+
+retangulo1 = Retangulo(10, 5)
+
+print("Área:", retangulo1.calcular_area())
+print("Perímetro:", retangulo1.calcular_perimetro())
+
+#EXERCICIO 5
+class ContaBancaria:
+    def __init__(self, titular, saldo=0):
+        self.titular = titular
+        self.saldo = saldo
+
+    def depositar(self, valor):
+        self.saldo += valor
+
+
+conta1 = ContaBancaria("João")
+
+print("Titular:", conta1.titular)
+print("Saldo inicial:", conta1.saldo)
+
+conta1.depositar(100)
+print("Saldo após depósito:", conta1.saldo)
+
+conta1.depositar(50)
+print("Saldo após segundo depósito:", conta1.saldo)
+
