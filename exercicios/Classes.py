@@ -9,10 +9,10 @@ class Cachorro:
         print(f"Au au! O {self.nome} está latindo.")
 
 
-# Criando um cachorro
+
 cachorro1 = Cachorro("Rex", "Pastor Alemão", 3)
 
-# Fazendo o cachorro latir
+
 cachorro1.latir()
 
 #EXERCICIO 2
@@ -29,11 +29,11 @@ print(pessoa.apresentar())
 
 #EXERCICIO 3
 class Produto:
-    def __init__(self, nome, preco):
+      def __init__(self, nome:str, preco:int):
         self.nome = nome
         self.preco = preco
 
-    def aplicar_desconto(self, percentual):
+      def aplicar_desconto(self, percentual):
         self.preco -= self.preco * (percentual / 100)
 
 
@@ -86,4 +86,27 @@ conta1.depositar(50)
 print("Saldo após segundo depósito:", conta1.saldo)
 
 #EXERCICIO 6
+class carro:
+    def __init__(self, marca:str, modelo:str):
+        self.marca = marca
+        self.modelo = modelo
+        self.ligado = False
 
+    def ligar(self):
+        self.ligado = True
+
+    def desligar(self):
+        self.ligado = False
+meu_carro = carro("toyota", "corolla")
+
+print(meu_carro.marca)
+print(meu_carro.modelo)
+print(meu_carro.ligado)
+
+meu_carro.ligar()
+print(meu_carro.ligado)
+
+meu_carro.desligar()
+print(meu_carro.ligado)
+
+        
