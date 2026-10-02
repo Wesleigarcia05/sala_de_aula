@@ -85,3 +85,5 @@ print("Saldo após depósito:", conta1.saldo)
 conta1.depositar(50)
 print("Saldo após segundo depósito:", conta1.saldo)
 
+#EXERCICIO 6
+

@@ -146,6 +146,91 @@ print(validador_ano_bissexto(2024))  # True
 print(validador_ano_bissexto(2025))  # False
 print(validador_ano_bissexto(1900))  # False
 print(validador_ano_bissexto(2000))  # True    
+
+#EXERCICIO 11
+def avaliar_estudante(p1, p2, frequencia, entregou_trabalho_extra):
+    media = (p1 + p2) / 2
+    if frequencia < 75:
+        return "Reprovado por frequência"
+    if media >= 7.0:
+        return "Aprovado direto"
+    if media >= 5.0:
+        if entregou_trabalho_extra == True:
+            media = media + 1.0
+            if media >= 7.0:
+                return "Aprovado com trabalho extra"
+        return "Exame final"
+    return "Reprovado por nota"
+resultado = avaliar_estudante(6.0, 6.5, 80, True)
+print(resultado)
+
+#EXERCICIO 12
+def localizar_ponto(x, y):
+    if x == 0 and y == 0:
+        return "Origem"
+    if x == 0 and y != 0:
+        return "Eixo Y"
+    if x > 0 and y > 0:
+        return "Q1"
+    if x > 0 and y > 0:
+        return "Q2"
+    if x < 0 and y < 0:
+        return "Q3"
+    if x > 0 and y < 0:
+        return "Q4"
+
+print (localizar_ponto(0, -5))
+
+#EXERCICIO 13
+def calcular_fatura_telefone(minutos:int, gigas:int, e_estudante):
+    valor = 50.00
+    if minutos > 100:
+        valor += (gigas - 5) * 10.00
+    if e_estudante == True and valor > 100:
+        valor -= 20
+    return f"Fatura final: R$ {valor:.2f}"
+print (calcular_fatura_telefone(120, 7, True))
+
+#EXERCICIO 14
+def avaliar_seguro(idade:int, anos_carteira, historico_acidentes):
+    if idade < 18 or anos_carteira < 1:
+        return "Não elegivel"
+    if historico_acidentes > 2:
+        return "Risco alto: recusado"
+    if historico_acidentes == 0:
+        if idade >= 25 and anos_carteira >= 3:
+            return "Aprovado: categoria VIP"
+        else:
+            return "Aprovado: categoria padrão"
+    if historico_acidentes == 1 or historico_acidentes == 2:
+        return "Aprovado: categoria alto risco"    
+    
+#EXERCICIO 15
+def ordenar_tres(a, b, c):
+    if a <= b and a <= c:
+        if b <= c:
+            return f"{a}, {b}, {c}"
+        else:
+            return f"{a}, {c}, {b}"
+
+    elif b <= a and b <= c:
+        if a <= c:
+            return f"{b}, {a}, {c}"
+        else:
+            return f"{b}, {c}, {a}"
+
+    else:
+        if a <= b:
+            return f"{c}, {a}, {b}"
+        else:
+            return f"{c}, {b}, {a}"
+print(ordenar_tres(42, 9, 17))
+    
+
+    
+
+            
+
     
 
 
